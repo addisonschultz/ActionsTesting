@@ -16,13 +16,13 @@ jobs:
 
       - name: Build
         # uses: framer/bridge@master
-        uses: echo
+        run: echo build
 
         # with:
         # args: build design-system.framerfx
         # args: echo building project
       - name: Publish
-        uses: echo
+        run: echo pub
         # uses: framer/bridge@master
         # env:
         #   FRAMER_TOKEN: ${{ secrets.FRAMER_TOKEN }}
