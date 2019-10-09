@@ -5,21 +5,23 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      # - uses: actions/checkout@master
 
-      - name: Branch filter
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
+      # - name: Branch filter
+      #   uses: actions/bin/filter@master
+      #   with:
+      #     args: branch master
 
       - name: Build
         uses: framer/bridge@master
         with:
-          args: build design-system.framerfx
+          # args: build design-system.framerfx
+          args: echo building project
 
       - name: Publish
         uses: framer/bridge@master
         env:
           FRAMER_TOKEN: ${{ secrets.FRAMER_TOKEN }}
         with:
-          args: publish design-system.framerfx --yes
+          # args: publish design-system.framerfx --yes
+          args: echo publishing to the store!
